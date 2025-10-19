@@ -860,6 +860,29 @@ static void batchSwizzlingOnClass(Class cls, NSArray<NSString*>*origSelectors, I
     }
     return %orig;
 }
+
+// Hook to hide For You tab in T1 timeline
+- (void)viewDidLoad {
+    %orig;
+    if ([BHTManager hideForYouTab]) {
+        // Hide For You tab controls
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if (self.parentViewController) {
+                for (UIView *subview in self.parentViewController.view.subviews) {
+                    if ([subview isKindOfClass:[UISegmentedControl class]]) {
+                        UISegmentedControl *segmentedControl = (UISegmentedControl *)subview;
+                        // Select Following tab if it exists (usually index 1)
+                        if (segmentedControl.numberOfSegments > 1) {
+                            segmentedControl.selectedSegmentIndex = 1;
+                            // Hide the control
+                            segmentedControl.hidden = YES;
+                        }
+                    }
+                }
+            }
+        });
+    }
+}
 %end
 
 %hook THFHomeTimelineItemsViewController
@@ -868,6 +891,29 @@ static void batchSwizzlingOnClass(Class cls, NSArray<NSString*>*origSelectors, I
         return;
     }
     return %orig;
+}
+
+// Hook to hide For You tab in THF timeline
+- (void)viewDidLoad {
+    %orig;
+    if ([BHTManager hideForYouTab]) {
+        // Hide For You tab controls
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if (self.parentViewController) {
+                for (UIView *subview in self.parentViewController.view.subviews) {
+                    if ([subview isKindOfClass:[UISegmentedControl class]]) {
+                        UISegmentedControl *segmentedControl = (UISegmentedControl *)subview;
+                        // Select Following tab if it exists (usually index 1)
+                        if (segmentedControl.numberOfSegments > 1) {
+                            segmentedControl.selectedSegmentIndex = 1;
+                            // Hide the control
+                            segmentedControl.hidden = YES;
+                        }
+                    }
+                }
+            }
+        });
+    }
 }
 %end
 
@@ -883,6 +929,37 @@ static void batchSwizzlingOnClass(Class cls, NSArray<NSString*>*origSelectors, I
         return;
     }
     return %orig;
+}
+
+// Hook to force always open Following tab
+- (void)viewDidLoad {
+    %orig;
+    if ([BHTManager hideForYouTab]) {
+        // Set default to Following timeline (index 1)
+        if ([self respondsToSelector:@selector(setSelectedTimelineIndex:)]) {
+            [self performSelector:@selector(setSelectedTimelineIndex:) withObject:@(1)];
+        }
+    }
+}
+
+// Hide the segmented control if it exists
+- (void)viewWillAppear:(BOOL)animated {
+    %orig;
+    if ([BHTManager hideForYouTab]) {
+        // Find and hide the segmented control
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            for (UIView *subview in self.view.subviews) {
+                if ([subview isKindOfClass:[UISegmentedControl class]]) {
+                    subview.hidden = YES;
+                }
+                // Also check for custom tab/pivot controls
+                NSString *className = NSStringFromClass([subview class]);
+                if ([className containsString:@"Pivot"] || [className containsString:@"Segment"] || [className containsString:@"Tab"]) {
+                    subview.hidden = YES;
+                }
+            }
+        });
+    }
 }
 %end
 

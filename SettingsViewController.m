@@ -191,6 +191,8 @@ static UIFont *TwitterChirpFont(TwitterFontStyle style) {
 
         PSSpecifier *hidePremiumOffer = [self newSwitchCellWithTitle:[[BHTBundle sharedBundle] localizedStringForKey:@"HIDE_PREMIUM_OFFER_OPTION"] detailTitle:[[BHTBundle sharedBundle] localizedStringForKey:@"HIDE_PREMIUM_OFFER_OPTION_DETAIL_TITLE"] key:@"hide_premium_offer" defaultValue:false changeAction:nil];
 
+        PSSpecifier *hideForYouTab = [self newSwitchCellWithTitle:[[BHTBundle sharedBundle] localizedStringForKey:@"HIDE_FOR_YOU_TAB_OPTION"] detailTitle:[[BHTBundle sharedBundle] localizedStringForKey:@"HIDE_FOR_YOU_TAB_OPTION_DETAIL_TITLE"] key:@"hide_for_you_tab" defaultValue:false changeAction:nil];
+
         PSSpecifier *hideTrendVideos = [self newSwitchCellWithTitle:[[BHTBundle sharedBundle] localizedStringForKey:@"HIDE_TREND_VIDEOS_OPTION_TITLE"] detailTitle:[[BHTBundle sharedBundle] localizedStringForKey:@"HIDE_TREND_VIDEOS_OPTION_DETAIL_TITLE"] key:@"hide_trend_videos" defaultValue:false changeAction:nil];
         
         PSSpecifier *videoLayerCaption = [self newSwitchCellWithTitle:[[BHTBundle sharedBundle] localizedStringForKey:@"DISABLE_VIDEO_LAYER_CAPTIONS_OPTION_TITLE"] detailTitle:nil key:@"dis_VODCaptions" defaultValue:false changeAction:nil];
@@ -301,6 +303,7 @@ static UIFont *TwitterChirpFont(TwitterFontStyle style) {
             directSave,
             hideAds,
             hidePremiumOffer,
+            hideForYouTab,
             appTheme,
             appIcon,
             customTabBarVC,

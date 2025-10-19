@@ -53,6 +53,9 @@
 "HIDE_PREMIUM_OFFER_OPTION" = "Hide Premium registration offer";
 "HIDE_PREMIUM_OFFER_OPTION_DETAIL_TITLE" = "Hide Get verified and Upgrade button in the profile and navigation bar";
 
+"HIDE_FOR_YOU_TAB_OPTION" = "Hide For You tab";
+"HIDE_FOR_YOU_TAB_OPTION_DETAIL_TITLE" = "Remove For You tab from home timeline, showing only Following";
+
 "HIDE_TREND_VIDEOS_OPTION_TITLE" = "Hide trending videos";
 "HIDE_TREND_VIDEOS_OPTION_DETAIL_TITLE" = "Hide trending videos in the Search tab";
 
