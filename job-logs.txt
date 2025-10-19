@@ -1,0 +1,643 @@
+﻿2025-10-19T14:21:56.7299670Z Current runner version: '2.329.0'
+2025-10-19T14:21:56.7332510Z ##[group]Runner Image Provisioner
+2025-10-19T14:21:56.7333630Z Hosted Compute Agent
+2025-10-19T14:21:56.7334320Z Version: 20251016.436
+2025-10-19T14:21:56.7335130Z Commit: 8ab8ac8bfd662a3739dab9fe09456aba92132568
+2025-10-19T14:21:56.7336110Z Build Date: 2025-10-15T20:44:12Z
+2025-10-19T14:21:56.7336900Z ##[endgroup]
+2025-10-19T14:21:56.7337580Z ##[group]Operating System
+2025-10-19T14:21:56.7338330Z macOS
+2025-10-19T14:21:56.7338930Z 13.7.6
+2025-10-19T14:21:56.7339530Z 22H625
+2025-10-19T14:21:56.7340130Z ##[endgroup]
+2025-10-19T14:21:56.7340780Z ##[group]Runner Image
+2025-10-19T14:21:56.7341480Z Image: macos-13
+2025-10-19T14:21:56.7342130Z Version: 20250908.1476
+2025-10-19T14:21:56.7343680Z Included Software: https://github.com/actions/runner-images/blob/macos-13/20250908.1476/images/macos/macos-13-Readme.md
+2025-10-19T14:21:56.7346200Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-13%2F20250908.1476
+2025-10-19T14:21:56.7347670Z ##[endgroup]
+2025-10-19T14:21:56.7349230Z ##[group]GITHUB_TOKEN Permissions
+2025-10-19T14:21:56.7351930Z Contents: write
+2025-10-19T14:21:56.7352620Z Metadata: read
+2025-10-19T14:21:56.7353250Z ##[endgroup]
+2025-10-19T14:21:56.7356300Z Secret source: Actions
+2025-10-19T14:21:56.7357200Z Prepare workflow directory
+2025-10-19T14:21:56.7962050Z Prepare all required actions
+2025-10-19T14:21:56.8031490Z Getting action download info
+2025-10-19T14:21:57.3608890Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-10-19T14:21:57.6476910Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+2025-10-19T14:21:58.4053720Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-10-19T14:21:58.6186120Z Download action repository 'softprops/action-gh-release@v2' (SHA:6da8fa9354ddfdc4aeace5fc48d7f679b5214090)
+2025-10-19T14:21:59.4249940Z Complete job name: Build BHTwitter
+2025-10-19T14:21:59.5587480Z ##[group]Run actions/checkout@v4
+2025-10-19T14:21:59.5590370Z with:
+2025-10-19T14:21:59.5591970Z   path: main
+2025-10-19T14:21:59.5593580Z   ref: refs/heads/master
+2025-10-19T14:21:59.5595390Z   submodules: recursive
+2025-10-19T14:21:59.5597240Z   repository: mogery/BHTwitter
+2025-10-19T14:21:59.5599780Z   token: ***
+2025-10-19T14:21:59.5601340Z   ssh-strict: true
+2025-10-19T14:21:59.5602980Z   ssh-user: git
+2025-10-19T14:21:59.5604890Z   persist-credentials: true
+2025-10-19T14:21:59.5606800Z   clean: true
+2025-10-19T14:21:59.5608470Z   sparse-checkout-cone-mode: true
+2025-10-19T14:21:59.5610610Z   fetch-depth: 1
+2025-10-19T14:21:59.5612230Z   fetch-tags: false
+2025-10-19T14:21:59.5613910Z   show-progress: true
+2025-10-19T14:21:59.5615660Z   lfs: false
+2025-10-19T14:21:59.5617290Z   set-safe-directory: true
+2025-10-19T14:21:59.5620420Z ##[endgroup]
+2025-10-19T14:21:59.8527630Z Syncing repository: mogery/BHTwitter
+2025-10-19T14:21:59.8534240Z ##[group]Getting Git version info
+2025-10-19T14:21:59.8538530Z Working directory is '/Users/runner/work/BHTwitter/BHTwitter/main'
+2025-10-19T14:21:59.8543770Z [command]/usr/local/bin/git version
+2025-10-19T14:21:59.8697890Z git version 2.50.1
+2025-10-19T14:21:59.8741820Z ##[endgroup]
+2025-10-19T14:21:59.8757860Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/ffbc2575-f7cb-4869-8f23-426b256d24be/.gitconfig'
+2025-10-19T14:21:59.8794240Z Temporarily overriding HOME='/Users/runner/work/_temp/ffbc2575-f7cb-4869-8f23-426b256d24be' before making global git config changes
+2025-10-19T14:21:59.8800240Z Adding repository directory to the temporary git global config as a safe directory
+2025-10-19T14:21:59.8805950Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/BHTwitter/BHTwitter/main
+2025-10-19T14:21:59.8940500Z ##[group]Initializing the repository
+2025-10-19T14:21:59.8948370Z [command]/usr/local/bin/git init /Users/runner/work/BHTwitter/BHTwitter/main
+2025-10-19T14:21:59.9252750Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-10-19T14:21:59.9260500Z hint: is subject to change. To configure the initial branch name to use in all
+2025-10-19T14:21:59.9266150Z hint: of your new repositories, which will suppress this warning, call:
+2025-10-19T14:21:59.9269070Z hint:
+2025-10-19T14:21:59.9270910Z hint: 	git config --global init.defaultBranch <name>
+2025-10-19T14:21:59.9273310Z hint:
+2025-10-19T14:21:59.9275670Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-10-19T14:21:59.9281210Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-10-19T14:21:59.9286770Z hint:
+2025-10-19T14:21:59.9288410Z hint: 	git branch -m <name>
+2025-10-19T14:21:59.9290250Z hint:
+2025-10-19T14:21:59.9292720Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-10-19T14:21:59.9297070Z Initialized empty Git repository in /Users/runner/work/BHTwitter/BHTwitter/main/.git/
+2025-10-19T14:21:59.9304120Z [command]/usr/local/bin/git remote add origin https://github.com/mogery/BHTwitter
+2025-10-19T14:21:59.9394670Z ##[endgroup]
+2025-10-19T14:21:59.9397950Z ##[group]Disabling automatic garbage collection
+2025-10-19T14:21:59.9401030Z [command]/usr/local/bin/git config --local gc.auto 0
+2025-10-19T14:21:59.9563770Z ##[endgroup]
+2025-10-19T14:21:59.9567070Z ##[group]Setting up auth
+2025-10-19T14:21:59.9579320Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-10-19T14:21:59.9715540Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-10-19T14:22:00.1238800Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-10-19T14:22:00.1339540Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-10-19T14:22:00.2545510Z [command]/usr/local/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-10-19T14:22:00.2656350Z ##[endgroup]
+2025-10-19T14:22:00.2659130Z ##[group]Fetching the repository
+2025-10-19T14:22:00.2677820Z [command]/usr/local/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master:refs/remotes/origin/master
+2025-10-19T14:22:02.5190910Z From https://github.com/mogery/BHTwitter
+2025-10-19T14:22:02.5193630Z  * [new branch]      master     -> origin/master
+2025-10-19T14:22:02.5298500Z ##[endgroup]
+2025-10-19T14:22:02.5299520Z ##[group]Determining the checkout info
+2025-10-19T14:22:02.5300600Z ##[endgroup]
+2025-10-19T14:22:02.5307520Z [command]/usr/local/bin/git sparse-checkout disable
+2025-10-19T14:22:02.5429540Z [command]/usr/local/bin/git config --local --unset-all extensions.worktreeConfig
+2025-10-19T14:22:02.5535730Z ##[group]Checking out the ref
+2025-10-19T14:22:02.5543120Z [command]/usr/local/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2025-10-19T14:22:03.4244060Z Reset branch 'master'
+2025-10-19T14:22:03.4254500Z branch 'master' set up to track 'origin/master'.
+2025-10-19T14:22:03.4285350Z ##[endgroup]
+2025-10-19T14:22:03.4289000Z ##[group]Setting up auth for fetching submodules
+2025-10-19T14:22:03.4292610Z [command]/usr/local/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-10-19T14:22:03.4426260Z [command]/usr/local/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-10-19T14:22:03.4519460Z [command]/usr/local/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-10-19T14:22:03.4615110Z [command]/usr/local/bin/git config --global --add url.https://github.com/.insteadOf org-66118807@github.com:
+2025-10-19T14:22:03.4704080Z ##[endgroup]
+2025-10-19T14:22:03.4704930Z ##[group]Fetching submodules
+2025-10-19T14:22:03.4710100Z [command]/usr/local/bin/git submodule sync --recursive
+2025-10-19T14:22:03.5922630Z [command]/usr/local/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-10-19T14:22:03.7246420Z [command]/usr/local/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-10-19T14:22:03.8455960Z ##[endgroup]
+2025-10-19T14:22:03.8459930Z ##[group]Persisting credentials for submodules
+2025-10-19T14:22:03.8466990Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-10-19T14:22:03.9947140Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-10-19T14:22:04.1070840Z [command]/usr/local/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-10-19T14:22:04.3442740Z [command]/usr/local/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-66118807@github.com:'
+2025-10-19T14:22:04.4713890Z ##[endgroup]
+2025-10-19T14:22:04.4900660Z [command]/usr/local/bin/git log -1 --format=%H
+2025-10-19T14:22:04.5058320Z 564db52e0c3a0ab9f9001f1701eb3d16bd918b6f
+2025-10-19T14:22:04.6921790Z ##[group]Run brew install make dpkg ldid
+2025-10-19T14:22:04.6922630Z [36;1mbrew install make dpkg ldid[0m
+2025-10-19T14:22:04.7087790Z shell: /bin/bash -e {0}
+2025-10-19T14:22:04.7088300Z ##[endgroup]
+2025-10-19T14:22:12.6581920Z [32m==>[0m [1mFetching downloads for: [32mmake[39m, [32mdpkg[39m and [32mldid[39m[0m
+2025-10-19T14:22:12.6608570Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/make/manifests/4.4.1-1[0m
+2025-10-19T14:22:12.9847430Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/dpkg/manifests/1.22.21[0m
+2025-10-19T14:22:13.3202160Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/ldid/manifests/2.1.5_1[0m
+2025-10-19T14:22:13.8607980Z [32m==>[0m [1mFetching [32mmake[39m[0m
+2025-10-19T14:22:13.8622270Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/make/blobs/sha256:e5b435315db19e1634289e888fcbd4282ed985a85591a7bec9661595a091d56f[0m
+2025-10-19T14:22:14.2034640Z [32m==>[0m [1mFetching dependencies for dpkg: [32mgpatch[39m and [32mlibmd[39m[0m
+2025-10-19T14:22:14.2053530Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/gpatch/manifests/2.8[0m
+2025-10-19T14:22:14.4598360Z [32m==>[0m [1mFetching [32mgpatch[39m[0m
+2025-10-19T14:22:14.4610390Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/gpatch/blobs/sha256:c953a2bb4faddd18394392879c8dce68094772834f5f9de162bd87657f56b8a9[0m
+2025-10-19T14:22:14.7874370Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/libmd/manifests/1.1.0[0m
+2025-10-19T14:22:15.0717700Z [32m==>[0m [1mFetching [32mlibmd[39m[0m
+2025-10-19T14:22:15.0728300Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/libmd/blobs/sha256:e81790c66cb480c6b411fca1e2adfded0e5c20ab12ec02e57e450bdb589539c3[0m
+2025-10-19T14:22:15.3893590Z [32m==>[0m [1mFetching [32mdpkg[39m[0m
+2025-10-19T14:22:15.3907800Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/dpkg/blobs/sha256:5f1e6078677fbfe8a24a4a2c723d775942d2c712b1522113773600dc9f68c99b[0m
+2025-10-19T14:22:15.9241840Z [32m==>[0m [1mFetching dependencies for ldid: [32mlibplist[39m[0m
+2025-10-19T14:22:15.9283560Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/libplist/manifests/2.7.0[0m
+2025-10-19T14:22:16.2388600Z [32m==>[0m [1mFetching [32mlibplist[39m[0m
+2025-10-19T14:22:16.2415870Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/libplist/blobs/sha256:93e6458295e03f9d407de1668d4b74b6862837c85d27543742046e6f5f9a5d9d[0m
+2025-10-19T14:22:16.5771290Z [32m==>[0m [1mFetching [32mldid[39m[0m
+2025-10-19T14:22:16.5791230Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/ldid/blobs/sha256:b6aba3db5dd5aab6835280e0fe777a566cc5eb524290482602ee2b8018145760[0m
+2025-10-19T14:22:16.8996660Z [34m==>[0m [1mPouring make--4.4.1.ventura.bottle.1.tar.gz[0m
+2025-10-19T14:22:17.2515700Z [34m==>[0m [1mCaveats[0m
+2025-10-19T14:22:17.2516320Z GNU "make" has been installed as "gmake".
+2025-10-19T14:22:17.2517090Z If you need to use it as "make", you can add a "gnubin" directory
+2025-10-19T14:22:17.2517810Z to your PATH from your bashrc like:
+2025-10-19T14:22:17.2518190Z 
+2025-10-19T14:22:17.2518430Z     PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+2025-10-19T14:22:17.2519110Z [34m==>[0m [1mSummary[0m
+2025-10-19T14:22:17.2543790Z 🍺  /usr/local/Cellar/make/4.4.1: 17 files, 1.3MB
+2025-10-19T14:22:17.3153660Z [32m==>[0m [1mInstalling dependencies for dpkg: [32mgpatch[39m and [32mlibmd[39m[0m
+2025-10-19T14:22:17.3161480Z [32m==>[0m [1mInstalling dpkg dependency: [32mgpatch[39m[0m
+2025-10-19T14:22:17.3167510Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/gpatch/manifests/2.8[0m
+2025-10-19T14:22:17.3169550Z Already downloaded: /Users/runner/Library/Caches/Homebrew/downloads/79a0392090780c3089a9b2c2d18f9647ecc3faa1d777473782aae7c636bcebd4--gpatch-2.8.bottle_manifest.json
+2025-10-19T14:22:17.3202010Z [34m==>[0m [1mPouring gpatch--2.8.ventura.bottle.tar.gz[0m
+2025-10-19T14:22:17.4217710Z 🍺  /usr/local/Cellar/gpatch/2.8: 12 files, 402.6KB
+2025-10-19T14:22:17.4227500Z [32m==>[0m [1mInstalling dpkg dependency: [32mlibmd[39m[0m
+2025-10-19T14:22:17.4233880Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/libmd/manifests/1.1.0[0m
+2025-10-19T14:22:17.4235940Z Already downloaded: /Users/runner/Library/Caches/Homebrew/downloads/eb60810b010acc3925d5bb89e30aaec898979502ae81de325303652efd9f6c99--libmd-1.1.0.bottle_manifest.json
+2025-10-19T14:22:17.4265010Z [34m==>[0m [1mPouring libmd--1.1.0.ventura.bottle.tar.gz[0m
+2025-10-19T14:22:17.7296500Z 🍺  /usr/local/Cellar/libmd/1.1.0: 98 files, 256.9KB
+2025-10-19T14:22:17.7310150Z [32m==>[0m [1mInstalling [32mdpkg[39m[0m
+2025-10-19T14:22:17.7320610Z [34m==>[0m [1mPouring dpkg--1.22.21.ventura.bottle.tar.gz[0m
+2025-10-19T14:22:23.0839490Z [34m==>[0m [1mCaveats[0m
+2025-10-19T14:22:23.0841480Z This installation of dpkg is not configured to install software, so
+2025-10-19T14:22:23.0843530Z commands such as `dpkg -i`, `dpkg --configure` will fail.
+2025-10-19T14:22:23.0847380Z [34m==>[0m [1mSummary[0m
+2025-10-19T14:22:23.1676310Z 🍺  /usr/local/Cellar/dpkg/1.22.21: 745 files, 17.0MB
+2025-10-19T14:22:23.2313830Z [32m==>[0m [1mInstalling ldid dependency: [32mlibplist[39m[0m
+2025-10-19T14:22:23.2324870Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/libplist/manifests/2.7.0[0m
+2025-10-19T14:22:23.2329570Z Already downloaded: /Users/runner/Library/Caches/Homebrew/downloads/e0496924f58628f0bb8aae0a1177d8f8f003e2e9f9f949939fd2399aced47c4d--libplist-2.7.0.bottle_manifest.json
+2025-10-19T14:22:23.2749780Z [34m==>[0m [1mPouring libplist--2.7.0.ventura.bottle.tar.gz[0m
+2025-10-19T14:22:23.7050720Z 🍺  /usr/local/Cellar/libplist/2.7.0: 32 files, 588.8KB
+2025-10-19T14:22:23.7066490Z [34m==>[0m [1mPouring ldid--2.1.5_1.ventura.bottle.tar.gz[0m
+2025-10-19T14:22:23.9817500Z 🍺  /usr/local/Cellar/ldid/2.1.5_1: 6 files, 268.3KB
+2025-10-19T14:22:23.9841230Z [34m==>[0m [1mNo outdated dependents to upgrade![0m
+2025-10-19T14:22:23.9842180Z [32m==>[0m [1mCaveats[0m
+2025-10-19T14:22:23.9842880Z [34m==>[0m [1mmake[0m
+2025-10-19T14:22:23.9843480Z GNU "make" has been installed as "gmake".
+2025-10-19T14:22:23.9844420Z If you need to use it as "make", you can add a "gnubin" directory
+2025-10-19T14:22:23.9845670Z to your PATH from your bashrc like:
+2025-10-19T14:22:23.9846160Z 
+2025-10-19T14:22:23.9846440Z     PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+2025-10-19T14:22:23.9847340Z [34m==>[0m [1mdpkg[0m
+2025-10-19T14:22:23.9848180Z This installation of dpkg is not configured to install software, so
+2025-10-19T14:22:23.9850060Z commands such as `dpkg -i`, `dpkg --configure` will fail.
+2025-10-19T14:22:24.0525130Z ##[group]Run echo "$(brew --prefix make)/libexec/gnubin" >> "$GITHUB_PATH"
+2025-10-19T14:22:24.0526350Z [36;1mecho "$(brew --prefix make)/libexec/gnubin" >> "$GITHUB_PATH"[0m
+2025-10-19T14:22:24.0699260Z shell: /bin/bash -e {0}
+2025-10-19T14:22:24.0699810Z ##[endgroup]
+2025-10-19T14:22:24.1986960Z ##[group]Run actions/checkout@v4
+2025-10-19T14:22:24.1987620Z with:
+2025-10-19T14:22:24.1988100Z   repository: theos/theos
+2025-10-19T14:22:24.1988610Z   ref: master
+2025-10-19T14:22:24.1989710Z   path: theos
+2025-10-19T14:22:24.1990210Z   submodules: recursive
+2025-10-19T14:22:24.1991050Z   token: ***
+2025-10-19T14:22:24.1991530Z   ssh-strict: true
+2025-10-19T14:22:24.1991990Z   ssh-user: git
+2025-10-19T14:22:24.1992500Z   persist-credentials: true
+2025-10-19T14:22:24.1993040Z   clean: true
+2025-10-19T14:22:24.1993540Z   sparse-checkout-cone-mode: true
+2025-10-19T14:22:24.1994220Z   fetch-depth: 1
+2025-10-19T14:22:24.1994710Z   fetch-tags: false
+2025-10-19T14:22:24.1995190Z   show-progress: true
+2025-10-19T14:22:24.1995700Z   lfs: false
+2025-10-19T14:22:24.1996180Z   set-safe-directory: true
+2025-10-19T14:22:24.1996710Z ##[endgroup]
+2025-10-19T14:22:24.3833040Z Syncing repository: theos/theos
+2025-10-19T14:22:24.3834570Z ##[group]Getting Git version info
+2025-10-19T14:22:24.3835860Z Working directory is '/Users/runner/work/BHTwitter/BHTwitter/theos'
+2025-10-19T14:22:24.3939110Z [command]/usr/local/bin/git version
+2025-10-19T14:22:24.4052870Z git version 2.50.1
+2025-10-19T14:22:24.4092480Z ##[endgroup]
+2025-10-19T14:22:24.4107290Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/71fc898a-606e-4a65-b87a-e5e4f2f7f072/.gitconfig'
+2025-10-19T14:22:24.4137590Z Temporarily overriding HOME='/Users/runner/work/_temp/71fc898a-606e-4a65-b87a-e5e4f2f7f072' before making global git config changes
+2025-10-19T14:22:24.4139610Z Adding repository directory to the temporary git global config as a safe directory
+2025-10-19T14:22:24.4147170Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/BHTwitter/BHTwitter/theos
+2025-10-19T14:22:24.4255560Z ##[group]Initializing the repository
+2025-10-19T14:22:24.4263670Z [command]/usr/local/bin/git init /Users/runner/work/BHTwitter/BHTwitter/theos
+2025-10-19T14:22:24.4480980Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-10-19T14:22:24.4483420Z hint: is subject to change. To configure the initial branch name to use in all
+2025-10-19T14:22:24.4487530Z hint: of your new repositories, which will suppress this warning, call:
+2025-10-19T14:22:24.4488540Z hint:
+2025-10-19T14:22:24.4490070Z hint: 	git config --global init.defaultBranch <name>
+2025-10-19T14:22:24.4492350Z hint:
+2025-10-19T14:22:24.4493320Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-10-19T14:22:24.4494790Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-10-19T14:22:24.4495840Z hint:
+2025-10-19T14:22:24.4496340Z hint: 	git branch -m <name>
+2025-10-19T14:22:24.4496920Z hint:
+2025-10-19T14:22:24.4497720Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-10-19T14:22:24.4499210Z Initialized empty Git repository in /Users/runner/work/BHTwitter/BHTwitter/theos/.git/
+2025-10-19T14:22:24.4504000Z [command]/usr/local/bin/git remote add origin https://github.com/theos/theos
+2025-10-19T14:22:24.4615300Z ##[endgroup]
+2025-10-19T14:22:24.4616250Z ##[group]Disabling automatic garbage collection
+2025-10-19T14:22:24.4622420Z [command]/usr/local/bin/git config --local gc.auto 0
+2025-10-19T14:22:24.4721560Z ##[endgroup]
+2025-10-19T14:22:24.4722400Z ##[group]Setting up auth
+2025-10-19T14:22:24.4732400Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-10-19T14:22:24.4833070Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-10-19T14:22:24.6132270Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-10-19T14:22:24.6258150Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-10-19T14:22:24.7824120Z [command]/usr/local/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-10-19T14:22:24.7970510Z ##[endgroup]
+2025-10-19T14:22:24.7972350Z ##[group]Fetching the repository
+2025-10-19T14:22:24.7989600Z [command]/usr/local/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master*:refs/remotes/origin/master* +refs/tags/master*:refs/tags/master*
+2025-10-19T14:22:25.3460850Z From https://github.com/theos/theos
+2025-10-19T14:22:25.3462260Z  * [new branch]      master     -> origin/master
+2025-10-19T14:22:25.3590740Z ##[endgroup]
+2025-10-19T14:22:25.3592150Z ##[group]Determining the checkout info
+2025-10-19T14:22:25.3603250Z [command]/usr/local/bin/git branch --list --remote origin/master
+2025-10-19T14:22:25.3707650Z   origin/master
+2025-10-19T14:22:25.3717100Z ##[endgroup]
+2025-10-19T14:22:25.3728780Z [command]/usr/local/bin/git sparse-checkout disable
+2025-10-19T14:22:25.3882120Z [command]/usr/local/bin/git config --local --unset-all extensions.worktreeConfig
+2025-10-19T14:22:25.3998250Z ##[group]Checking out the ref
+2025-10-19T14:22:25.4007340Z [command]/usr/local/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2025-10-19T14:22:25.4871730Z Reset branch 'master'
+2025-10-19T14:22:25.4879140Z branch 'master' set up to track 'origin/master'.
+2025-10-19T14:22:25.4894520Z ##[endgroup]
+2025-10-19T14:22:25.4895770Z ##[group]Setting up auth for fetching submodules
+2025-10-19T14:22:25.4904420Z [command]/usr/local/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-10-19T14:22:25.5032550Z [command]/usr/local/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-10-19T14:22:25.5141480Z [command]/usr/local/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-10-19T14:22:25.5267530Z [command]/usr/local/bin/git config --global --add url.https://github.com/.insteadOf org-66118807@github.com:
+2025-10-19T14:22:25.5391080Z ##[endgroup]
+2025-10-19T14:22:25.5392230Z ##[group]Fetching submodules
+2025-10-19T14:22:25.5399130Z [command]/usr/local/bin/git submodule sync --recursive
+2025-10-19T14:22:25.6930000Z [command]/usr/local/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-10-19T14:22:25.8291250Z Submodule 'vendor/dm.pl' (https://github.com/theos/dm.pl.git) registered for path 'vendor/dm.pl'
+2025-10-19T14:22:25.8301750Z Submodule 'vendor/include' (https://github.com/theos/headers.git) registered for path 'vendor/include'
+2025-10-19T14:22:25.8316690Z Submodule 'vendor/lib' (https://github.com/theos/lib.git) registered for path 'vendor/lib'
+2025-10-19T14:22:25.8328910Z Submodule 'vendor/logos' (https://github.com/theos/logos.git) registered for path 'vendor/logos'
+2025-10-19T14:22:25.8343080Z Submodule 'vendor/nic' (https://github.com/theos/nic.git) registered for path 'vendor/nic'
+2025-10-19T14:22:25.8356460Z Submodule 'vendor/orion' (https://github.com/theos/orion.git) registered for path 'vendor/orion'
+2025-10-19T14:22:25.8371650Z Submodule 'vendor/swift-support' (https://github.com/theos/swift-support.git) registered for path 'vendor/swift-support'
+2025-10-19T14:22:25.8385100Z Submodule 'vendor/templates' (https://github.com/theos/templates.git) registered for path 'vendor/templates'
+2025-10-19T14:22:25.8559320Z Cloning into '/Users/runner/work/BHTwitter/BHTwitter/theos/vendor/dm.pl'...
+2025-10-19T14:22:26.3913120Z Cloning into '/Users/runner/work/BHTwitter/BHTwitter/theos/vendor/include'...
+2025-10-19T14:22:26.9970730Z Cloning into '/Users/runner/work/BHTwitter/BHTwitter/theos/vendor/lib'...
+2025-10-19T14:22:27.6397090Z Cloning into '/Users/runner/work/BHTwitter/BHTwitter/theos/vendor/logos'...
+2025-10-19T14:22:28.1893450Z Cloning into '/Users/runner/work/BHTwitter/BHTwitter/theos/vendor/nic'...
+2025-10-19T14:22:28.7366550Z Cloning into '/Users/runner/work/BHTwitter/BHTwitter/theos/vendor/orion'...
+2025-10-19T14:22:29.3316320Z Cloning into '/Users/runner/work/BHTwitter/BHTwitter/theos/vendor/swift-support'...
+2025-10-19T14:22:29.9028120Z Cloning into '/Users/runner/work/BHTwitter/BHTwitter/theos/vendor/templates'...
+2025-10-19T14:22:30.4467270Z Submodule path 'vendor/dm.pl': checked out 'd9a3b72e274226dd2823c0a7c1d6d05099f4f51c'
+2025-10-19T14:22:30.7895160Z Submodule path 'vendor/include': checked out 'd60045bfc3fbddb43be6d2cbd146693da2ae00b4'
+2025-10-19T14:22:30.8921780Z Submodule path 'vendor/lib': checked out '6f2af307568e6b8c52181d26314b0cd69ffaf188'
+2025-10-19T14:22:30.9503460Z Submodule path 'vendor/logos': checked out 'a62370066a97e36d59b200a9fa10c5091f5e8972'
+2025-10-19T14:22:31.0066520Z Submodule path 'vendor/nic': checked out '8ce35a5c5844dc7c74ace84657b6d70b0ff481dd'
+2025-10-19T14:22:31.0869650Z Submodule path 'vendor/orion': checked out 'f9a1b2d194849da9d4769ed08526d985fdaf1f0c'
+2025-10-19T14:22:31.0964060Z Submodule 'fishhook' (https://github.com/facebook/fishhook.git) registered for path 'vendor/orion/fishhook'
+2025-10-19T14:22:31.1103780Z Cloning into '/Users/runner/work/BHTwitter/BHTwitter/theos/vendor/orion/fishhook'...
+2025-10-19T14:22:31.6151750Z Submodule path 'vendor/orion/fishhook': checked out 'aadc161ac3b80db07a9908851839a17ba63a9eb1'
+2025-10-19T14:22:31.6558220Z Submodule path 'vendor/swift-support': checked out '4cf59ff04cdb2ceb27ea2228753e0497297b6182'
+2025-10-19T14:22:31.7407830Z Submodule path 'vendor/templates': checked out '6c3944e281c4726f1383755d0fbb642840312d28'
+2025-10-19T14:22:31.7516340Z [command]/usr/local/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-10-19T14:22:31.8681140Z Entering 'vendor/dm.pl'
+2025-10-19T14:22:31.8902060Z Entering 'vendor/include'
+2025-10-19T14:22:31.9128590Z Entering 'vendor/lib'
+2025-10-19T14:22:31.9345590Z Entering 'vendor/logos'
+2025-10-19T14:22:31.9581370Z Entering 'vendor/nic'
+2025-10-19T14:22:31.9822920Z Entering 'vendor/orion'
+2025-10-19T14:22:32.0089820Z Entering 'vendor/orion/fishhook'
+2025-10-19T14:22:32.0356230Z Entering 'vendor/swift-support'
+2025-10-19T14:22:32.0622610Z Entering 'vendor/templates'
+2025-10-19T14:22:32.0914100Z ##[endgroup]
+2025-10-19T14:22:32.0915940Z ##[group]Persisting credentials for submodules
+2025-10-19T14:22:32.0926500Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-10-19T14:22:32.2104670Z Entering 'vendor/dm.pl'
+2025-10-19T14:22:32.2380230Z Entering 'vendor/include'
+2025-10-19T14:22:32.2657580Z Entering 'vendor/lib'
+2025-10-19T14:22:32.2935460Z Entering 'vendor/logos'
+2025-10-19T14:22:32.3223150Z Entering 'vendor/nic'
+2025-10-19T14:22:32.3500320Z Entering 'vendor/orion'
+2025-10-19T14:22:32.3772250Z Entering 'vendor/orion/fishhook'
+2025-10-19T14:22:32.4023900Z Entering 'vendor/swift-support'
+2025-10-19T14:22:32.4277700Z Entering 'vendor/templates'
+2025-10-19T14:22:32.4546340Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-10-19T14:22:32.5754370Z Entering 'vendor/dm.pl'
+2025-10-19T14:22:32.6039550Z file:/Users/runner/work/BHTwitter/BHTwitter/theos/.git/modules/vendor/dm.pl/config	remote.origin.url
+2025-10-19T14:22:32.6133940Z Entering 'vendor/include'
+2025-10-19T14:22:32.6400950Z file:/Users/runner/work/BHTwitter/BHTwitter/theos/.git/modules/vendor/include/config	remote.origin.url
+2025-10-19T14:22:32.6494220Z Entering 'vendor/lib'
+2025-10-19T14:22:32.6805520Z file:/Users/runner/work/BHTwitter/BHTwitter/theos/.git/modules/vendor/lib/config	remote.origin.url
+2025-10-19T14:22:32.6917320Z Entering 'vendor/logos'
+2025-10-19T14:22:32.7244010Z file:/Users/runner/work/BHTwitter/BHTwitter/theos/.git/modules/vendor/logos/config	remote.origin.url
+2025-10-19T14:22:32.7351780Z Entering 'vendor/nic'
+2025-10-19T14:22:32.7671440Z file:/Users/runner/work/BHTwitter/BHTwitter/theos/.git/modules/vendor/nic/config	remote.origin.url
+2025-10-19T14:22:32.7775820Z Entering 'vendor/orion'
+2025-10-19T14:22:32.8070350Z file:/Users/runner/work/BHTwitter/BHTwitter/theos/.git/modules/vendor/orion/config	remote.origin.url
+2025-10-19T14:22:32.8161660Z Entering 'vendor/orion/fishhook'
+2025-10-19T14:22:32.8434720Z file:/Users/runner/work/BHTwitter/BHTwitter/theos/.git/modules/vendor/orion/modules/fishhook/config	remote.origin.url
+2025-10-19T14:22:32.8529190Z Entering 'vendor/swift-support'
+2025-10-19T14:22:32.8792060Z file:/Users/runner/work/BHTwitter/BHTwitter/theos/.git/modules/vendor/swift-support/config	remote.origin.url
+2025-10-19T14:22:32.8882710Z Entering 'vendor/templates'
+2025-10-19T14:22:32.9152780Z file:/Users/runner/work/BHTwitter/BHTwitter/theos/.git/modules/vendor/templates/config	remote.origin.url
+2025-10-19T14:22:32.9375040Z [command]/usr/local/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-10-19T14:22:33.0528810Z Entering 'vendor/dm.pl'
+2025-10-19T14:22:33.0751280Z Entering 'vendor/include'
+2025-10-19T14:22:33.1034720Z Entering 'vendor/lib'
+2025-10-19T14:22:33.1290680Z Entering 'vendor/logos'
+2025-10-19T14:22:33.1536700Z Entering 'vendor/nic'
+2025-10-19T14:22:33.1756730Z Entering 'vendor/orion'
+2025-10-19T14:22:33.1973620Z Entering 'vendor/orion/fishhook'
+2025-10-19T14:22:33.2201210Z Entering 'vendor/swift-support'
+2025-10-19T14:22:33.2429490Z Entering 'vendor/templates'
+2025-10-19T14:22:33.2675280Z [command]/usr/local/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-66118807@github.com:'
+2025-10-19T14:22:33.3817770Z Entering 'vendor/dm.pl'
+2025-10-19T14:22:33.4045000Z Entering 'vendor/include'
+2025-10-19T14:22:33.4279980Z Entering 'vendor/lib'
+2025-10-19T14:22:33.4498240Z Entering 'vendor/logos'
+2025-10-19T14:22:33.4721690Z Entering 'vendor/nic'
+2025-10-19T14:22:33.4960380Z Entering 'vendor/orion'
+2025-10-19T14:22:33.5182180Z Entering 'vendor/orion/fishhook'
+2025-10-19T14:22:33.5415680Z Entering 'vendor/swift-support'
+2025-10-19T14:22:33.5644100Z Entering 'vendor/templates'
+2025-10-19T14:22:33.5893220Z ##[endgroup]
+2025-10-19T14:22:33.6013100Z [command]/usr/local/bin/git log -1 --format=%H
+2025-10-19T14:22:33.6101690Z ee5b7098b0cd3188c4c5b8fa43eca56ef7d0919f
+2025-10-19T14:22:33.6346890Z ##[group]Run pip install https://github.com/asdfzxcvbn/pyzule-rw/archive/main.zip
+2025-10-19T14:22:33.6348190Z [36;1mpip install https://github.com/asdfzxcvbn/pyzule-rw/archive/main.zip[0m
+2025-10-19T14:22:33.6495260Z shell: /bin/bash -e {0}
+2025-10-19T14:22:33.6495700Z ##[endgroup]
+2025-10-19T14:22:35.4396170Z Collecting https://github.com/asdfzxcvbn/pyzule-rw/archive/main.zip
+2025-10-19T14:22:35.8848780Z   Downloading https://github.com/asdfzxcvbn/pyzule-rw/archive/main.zip
+2025-10-19T14:22:36.9192030Z      / 8.6 MB 9.0 MB/s 0:00:01
+2025-10-19T14:22:37.1386720Z   Installing build dependencies: started
+2025-10-19T14:22:38.5480570Z   Installing build dependencies: finished with status 'done'
+2025-10-19T14:22:38.5497600Z   Getting requirements to build wheel: started
+2025-10-19T14:22:39.1495490Z   Getting requirements to build wheel: finished with status 'done'
+2025-10-19T14:22:39.1525140Z   Preparing metadata (pyproject.toml): started
+2025-10-19T14:22:39.4616820Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2025-10-19T14:22:39.4665220Z Building wheels for collected packages: cyan
+2025-10-19T14:22:39.4684300Z   Building wheel for cyan (pyproject.toml): started
+2025-10-19T14:22:41.4829400Z   Building wheel for cyan (pyproject.toml): finished with status 'done'
+2025-10-19T14:22:41.5127320Z   Created wheel for cyan: filename=cyan-1.4.4-py3-none-any.whl size=8541476 sha256=41a89cde81dba155aa67751ada2b18430137f3668574183836b6815dde6d8f5f
+2025-10-19T14:22:41.5132210Z   Stored in directory: /private/var/folders/vk/nx37ffx50hv5djclhltc26vw0000gn/T/pip-ephem-wheel-cache-04ei1_bq/wheels/ba/a0/76/43bd9a259234d8c84d0bf76728e245242fca9a9872848d5e4d
+2025-10-19T14:22:41.5199010Z Successfully built cyan
+2025-10-19T14:22:41.5305120Z Installing collected packages: cyan
+2025-10-19T14:22:41.7630860Z Successfully installed cyan-1.4.4
+2025-10-19T14:22:42.0406590Z ##[group]Run actions/cache@v4
+2025-10-19T14:22:42.0407200Z with:
+2025-10-19T14:22:42.0407620Z   path: theos/sdks/
+2025-10-19T14:22:42.0408070Z   key: iOS-16.5-SDK
+2025-10-19T14:22:42.0408570Z   restore-keys: iOS-16.5-SDK
+2025-10-19T14:22:42.0409120Z   enableCrossOsArchive: false
+2025-10-19T14:22:42.0409690Z   fail-on-cache-miss: false
+2025-10-19T14:22:42.0410210Z   lookup-only: false
+2025-10-19T14:22:42.0410700Z   save-always: false
+2025-10-19T14:22:42.0411130Z env:
+2025-10-19T14:22:42.0411560Z   cache-name: iOS-16.5-SDK
+2025-10-19T14:22:42.0412040Z ##[endgroup]
+2025-10-19T14:22:42.6195420Z Cache not found for input keys: iOS-16.5-SDK, iOS-16.5-SDK
+2025-10-19T14:22:42.6336560Z ##[group]Run # Only download the specific SDK version
+2025-10-19T14:22:42.6337460Z [36;1m# Only download the specific SDK version[0m
+2025-10-19T14:22:42.6338410Z [36;1mgit clone -n --depth=1 --filter=tree:0 https://github.com/theos/sdks/[0m
+2025-10-19T14:22:42.6339320Z [36;1mcd sdks[0m
+2025-10-19T14:22:42.6339950Z [36;1mgit sparse-checkout set --no-cone iPhoneOS16.5.sdk[0m
+2025-10-19T14:22:42.6340690Z [36;1mgit checkout[0m
+2025-10-19T14:22:42.6341240Z [36;1mmv ./*.sdk "${THEOS}/sdks"[0m
+2025-10-19T14:22:42.6502610Z shell: /bin/bash -e {0}
+2025-10-19T14:22:42.6503100Z env:
+2025-10-19T14:22:42.6503650Z   THEOS: /Users/runner/work/BHTwitter/BHTwitter/theos
+2025-10-19T14:22:42.6504370Z ##[endgroup]
+2025-10-19T14:22:42.6864050Z Cloning into 'sdks'...
+2025-10-19T14:23:03.1580550Z Your branch is up to date with 'origin/master'.
+2025-10-19T14:23:03.1808850Z ##[group]Run BHTWITTER_VERSION=$(awk '/Version:/ {print $2}' main/control)
+2025-10-19T14:23:03.1810620Z [36;1mBHTWITTER_VERSION=$(awk '/Version:/ {print $2}' main/control)[0m
+2025-10-19T14:23:03.1812160Z [36;1mecho "BHTWITTER_VERSION=${BHTWITTER_VERSION}" >> "$GITHUB_ENV"[0m
+2025-10-19T14:23:03.1813690Z [36;1mecho "$BHTWITTER_VERSION"[0m
+2025-10-19T14:23:03.2030020Z shell: /bin/bash -e {0}
+2025-10-19T14:23:03.2030760Z ##[endgroup]
+2025-10-19T14:23:03.2490220Z 4.5
+2025-10-19T14:23:03.2595240Z ##[group]Run wget "$IPA_URL" --no-verbose -O main/packages/com.atebits.Tweetie2.ipa
+2025-10-19T14:23:03.2597390Z [36;1mwget "$IPA_URL" --no-verbose -O main/packages/com.atebits.Tweetie2.ipa[0m
+2025-10-19T14:23:03.2598630Z [36;1munzip -q main/packages/com.atebits.Tweetie2.ipa -d main/tmp[0m
+2025-10-19T14:23:03.2600360Z [36;1m# Get the version number of the X app and store it[0m
+2025-10-19T14:23:03.2602670Z [36;1mX_VERSION=$(grep -A 1 '<key>CFBundleShortVersionString</key>' main/tmp/Payload/Twitter.app/Info.plist |[0m
+2025-10-19T14:23:03.2604210Z [36;1m  grep '<string>' | awk -F'[><]' '{print $3}')[0m
+2025-10-19T14:23:03.2604990Z [36;1mecho "X_VERSION=${X_VERSION}" >> "$GITHUB_ENV"[0m
+2025-10-19T14:23:03.2605730Z [36;1mecho "$X_VERSION"[0m
+2025-10-19T14:23:03.2837460Z shell: /bin/bash -e {0}
+2025-10-19T14:23:03.2838020Z env:
+2025-10-19T14:23:03.2838440Z   BHTWITTER_VERSION: 4.5
+2025-10-19T14:23:03.2839090Z   IPA_URL: https://files.catbox.moe/u385kl.ipa
+2025-10-19T14:23:03.2839950Z ##[endgroup]
+2025-10-19T14:23:06.6062460Z 2025-10-19 14:23:06 URL:https://files.catbox.moe/u385kl.ipa [157359047/157359047] -> "main/packages/com.atebits.Tweetie2.ipa" [1]
+2025-10-19T14:23:14.8775890Z 11.30.1
+2025-10-19T14:23:14.8849160Z ##[group]Run cd /Users/runner/work/BHTwitter/BHTwitter/main
+2025-10-19T14:23:14.8851190Z [36;1mcd /Users/runner/work/BHTwitter/BHTwitter/main[0m
+2025-10-19T14:23:14.8854610Z [36;1msed -i '' "s/^TARGET.*$/TARGET := iphone:clang:16.5:15.0/" Makefile[0m
+2025-10-19T14:23:14.8855860Z [36;1m./build.sh --sideloaded[0m
+2025-10-19T14:23:14.9083930Z shell: /bin/bash -e {0}
+2025-10-19T14:23:14.9084480Z env:
+2025-10-19T14:23:14.9084930Z   BHTWITTER_VERSION: 4.5
+2025-10-19T14:23:14.9085460Z   X_VERSION: 11.30.1
+2025-10-19T14:23:14.9086080Z   THEOS: /Users/runner/work/BHTwitter/BHTwitter/theos
+2025-10-19T14:23:14.9086770Z ##[endgroup]
+2025-10-19T14:23:14.9570460Z [1m[32mBuilding BHTwitter project for sideloaded.[0m
+2025-10-19T14:23:25.2183400Z [0;36m==> [1;39mCleaning…[m
+2025-10-19T14:23:26.0610590Z [1;31m> [1;3;39mMaking all for tweak BHTwitter…[m
+2025-10-19T14:23:29.1379840Z [0;31m==> [1;39mPreprocessing Tweak.x…[m
+2025-10-19T14:23:32.2561080Z [0;32m==> [1;39mCompiling SimpleAlert.m (arm64)…[m
+2025-10-19T14:23:32.4302490Z [0;32m==> [1;39mCompiling BHDownload/BHDownload.m (arm64)…[m
+2025-10-19T14:23:32.5661830Z [0;32m==> [1;39mCompiling BHTBundle/BHTBundle.m (arm64)…[m
+2025-10-19T14:23:32.8678840Z [0;32m==> [1;39mCompiling Colours/Colours.m (arm64)…[m
+2025-10-19T14:23:33.3841190Z [0;32m==> [1;39mCompiling JGProgressHUD/JGProgressHUD.m (arm64)…[m
+2025-10-19T14:23:33.6944240Z [0;32m==> [1;39mCompiling JGProgressHUD/JGProgressHUDAnimation.m (arm64)…[m
+2025-10-19T14:23:34.0846150Z [0;32m==> [1;39mCompiling JGProgressHUD/JGProgressHUDErrorIndicatorView.m (arm64)…[m
+2025-10-19T14:23:34.3112250Z [0;32m==> [1;39mCompiling JGProgressHUD/JGProgressHUDFadeAnimation.m (arm64)…[m
+2025-10-19T14:23:34.6546910Z [0;32m==> [1;39mCompiling JGProgressHUD/JGProgressHUDFadeZoomAnimation.m (arm64)…[m
+2025-10-19T14:23:34.7552970Z [1mBHDownloadInlineButton.m:155:1: [0m[0;1;35mwarning: [0m[1mconflicting return type in implementation of 'touchInsetPriority': 'NSUInteger' (aka 'unsigned long') vs 'typeof (2)' (aka 'int') [-Wmismatched-return-types][0m
+2025-10-19T14:23:34.7555380Z [0;32m==> [1;39mCompiling BHDownloadInlineButton.m (arm64)…[m
+2025-10-19T14:23:34.8558810Z BH_METRIC(touchInsetPriority,         2)
+2025-10-19T14:23:34.9560950Z [0;1;32m^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-10-19T14:23:34.9562580Z [0;32m==> [1;39mCompiling JGProgressHUD/JGProgressHUDImageIndicatorView.m (arm64)…[m
+2025-10-19T14:23:35.0557690Z [0m[1mBHDownloadInlineButton.m:147:5: [0m[0;1;30mnote: [0mexpanded from macro 'BH_METRIC'[0m
+2025-10-19T14:23:35.0560080Z [0;32m==> [1;39mCompiling JGProgressHUD/JGProgressHUDIndeterminateIndicatorView.m (arm64)…[m
+2025-10-19T14:23:35.0578630Z     - (typeof(value))name { return value; } \
+2025-10-19T14:23:35.2586980Z [0;1;32m    ^  ~~~~~~~~~~~~~
+2025-10-19T14:23:35.2588910Z [0;32m==> [1;39mCompiling BHTManager.m (arm64)…[m
+2025-10-19T14:23:35.2885690Z [0m[1m/Users/runner/work/BHTwitter/BHTwitter/main/BHDownloadInlineButton.h:44:1: [0m[0;1;30mnote: [0mprevious definition is here[0m
+2025-10-19T14:23:35.2937140Z - (NSUInteger)touchInsetPriority;
+2025-10-19T14:23:35.2942210Z [0;1;32m^  ~~~~~~~~~~
+2025-10-19T14:23:35.2946590Z [0m[1mBHDownloadInlineButton.m:154:1: [0m[0;1;35mwarning: [0m[1mconflicting return type in implementation of 'alternateInlineActionType': 'NSUInteger' (aka 'unsigned long') vs 'typeof (6)' (aka 'int') [-Wmismatched-return-types][0m
+2025-10-19T14:23:35.2970060Z BH_METRIC(alternateInlineActionType,  6)
+2025-10-19T14:23:35.3276530Z [0;1;32m^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-10-19T14:23:35.3298800Z [0m[1mBHDownloadInlineButton.m:147:5: [0m[0;1;30mnote: [0mexpanded from macro 'BH_METRIC'[0m
+2025-10-19T14:23:35.3324660Z     - (typeof(value))name { return value; } \
+2025-10-19T14:23:35.3626580Z [0;32m==> [1;39mCompiling JGProgressHUD/JGProgressHUDRingIndicatorView.m (arm64)…[m
+2025-10-19T14:23:35.3677100Z [0;1;32m    ^  ~~~~~~~~~~~~~
+2025-10-19T14:23:35.3694350Z [0m[1m/Users/runner/work/BHTwitter/BHTwitter/main/BHDownloadInlineButton.h:45:1: [0m[0;1;30mnote: [0mprevious definition is here[0m
+2025-10-19T14:23:35.3724980Z [0;32m==> [1;39mCompiling JGProgressHUD/JGProgressHUDPieIndicatorView.m (arm64)…[m
+2025-10-19T14:23:35.3729060Z - (NSUInteger)alternateInlineActionType;
+2025-10-19T14:23:35.3732630Z [0;32m==> [1;39mCompiling JGProgressHUD/JGProgressHUDIndicatorView.m (arm64)…[m
+2025-10-19T14:23:35.3734790Z [0;1;32m^  ~~~~~~~~~~
+2025-10-19T14:23:35.3740610Z [0m[1mBHDownloadInlineButton.m:153:1: [0m[0;1;35mwarning: [0m[1mconflicting return type in implementation of 'visibility': 'NSUInteger' (aka 'unsigned long') vs 'typeof (1)' (aka 'int') [-Wmismatched-return-types][0m
+2025-10-19T14:23:35.3744500Z BH_METRIC(visibility,                 1)
+2025-10-19T14:23:35.3747850Z [0;1;32m^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-10-19T14:23:35.3750880Z [0m[1mBHDownloadInlineButton.m:147:5: [0m[0;1;30mnote: [0mexpanded from macro 'BH_METRIC'[0m
+2025-10-19T14:23:35.3766320Z     - (typeof(value))name { return value; } \
+2025-10-19T14:23:35.3782590Z [0;1;32m    ^  ~~~~~~~~~~~~~
+2025-10-19T14:23:35.3797980Z [0m[1m/Users/runner/work/BHTwitter/BHTwitter/main/BHDownloadInlineButton.h:46:1: [0m[0;1;30mnote: [0mprevious definition is here[0m
+2025-10-19T14:23:35.3815220Z - (NSUInteger)visibility;
+2025-10-19T14:23:35.3818370Z [0;1;32m^  ~~~~~~~~~~
+2025-10-19T14:23:35.3841380Z [0m[1mBHDownloadInlineButton.m:157:1: [0m[0;1;35mwarning: [0m[1mconflicting return type in implementation of 'displayType': 'NSUInteger' (aka 'unsigned long') vs 'typeof (0)' (aka 'int') [-Wmismatched-return-types][0m
+2025-10-19T14:23:35.3848790Z BH_METRIC(displayType,                0)
+2025-10-19T14:23:35.3882330Z [0;1;32m^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-10-19T14:23:35.3892290Z [0m[1mBHDownloadInlineButton.m:147:5: [0m[0;1;30mnote: [0mexpanded from macro 'BH_METRIC'[0m
+2025-10-19T14:23:35.3914660Z     - (typeof(value))name { return value; } \
+2025-10-19T14:23:35.3934400Z [0;1;32m    ^  ~~~~~~~~~~~~~
+2025-10-19T14:23:35.3958890Z [0m[1m/Users/runner/work/BHTwitter/BHTwitter/main/BHDownloadInlineButton.h:34:42: [0m[0;1;30mnote: [0mprevious definition is here[0m
+2025-10-19T14:23:35.3990200Z @property (nonatomic, assign) NSUInteger displayType;
+2025-10-19T14:23:35.4008700Z [0;1;32m                                         ^
+2025-10-19T14:23:35.4195710Z [0m4 warnings generated.
+2025-10-19T14:23:35.4286070Z [0;32m==> [1;39mCompiling SettingsViewController.m (arm64)…[m
+2025-10-19T14:23:35.6183870Z [0;32m==> [1;39mCompiling JGProgressHUD/JGProgressHUDShadow.m (arm64)…[m
+2025-10-19T14:23:35.6543100Z [0;32m==> [1;39mCompiling SAMKeychain/SAMKeychain.m (arm64)…[m
+2025-10-19T14:23:35.6966570Z [0;32m==> [1;39mCompiling JGProgressHUD/JGProgressHUDSuccessIndicatorView.m (arm64)…[m
+2025-10-19T14:23:35.8677210Z [0;32m==> [1;39mCompiling SAMKeychain/keychain.m (arm64)…[m
+2025-10-19T14:23:35.9065980Z [0;32m==> [1;39mCompiling SAMKeychain/SAMKeychainQuery.m (arm64)…[m
+2025-10-19T14:23:35.9879720Z [0;32m==> [1;39mCompiling SAMKeychain/AuthViewController.m (arm64)…[m
+2025-10-19T14:23:36.0024040Z [0;32m==> [1;39mCompiling AppIcon/BHAppIconCell.m (arm64)…[m
+2025-10-19T14:23:36.1681300Z [0;32m==> [1;39mCompiling AppIcon/BHAppIconItem.m (arm64)…[m
+2025-10-19T14:23:36.2060650Z [0;32m==> [1;39mCompiling CustomTabBar/BHCustomTabBarSection.m (arm64)…[m
+2025-10-19T14:23:36.2182620Z [0;32m==> [1;39mCompiling CustomTabBar/BHCustomTabBarItem.m (arm64)…[m
+2025-10-19T14:23:36.2922060Z [0;32m==> [1;39mCompiling AppIcon/BHAppIconViewController.m (arm64)…[m
+2025-10-19T14:23:36.3346660Z [0;32m==> [1;39mCompiling CustomTabBar/BHCustomTabBarUtility.m (arm64)…[m
+2025-10-19T14:23:36.5103930Z [0;32m==> [1;39mCompiling ThemeColor/BHColorThemeCell.m (arm64)…[m
+2025-10-19T14:23:36.5126740Z [0;32m==> [1;39mCompiling ThemeColor/BHColorThemeItem.m (arm64)…[m
+2025-10-19T14:23:36.5913850Z [0;32m==> [1;39mCompiling CustomTabBar/BHCustomTabBarViewController.m (arm64)…[m
+2025-10-19T14:23:36.7201350Z [0;32m==> [1;39mCompiling ThemeColor/BHColorThemeViewController.m (arm64)…[m
+2025-10-19T14:23:37.0673110Z [1mTweak.x:644:27: [0m[0;1;35mwarning: [0m[1massigning to 'T1StatusCell *__strong' from incompatible type 'id<TTACoreStatusViewEventHandler>'[0m
+2025-10-19T14:23:37.0675710Z [0;32m==> [1;39mCompiling Tweak.x (arm64)…[m
+2025-10-19T14:23:37.0676820Z                 tweetView = [(T1StandardStatusView *)actionsView.superview eventHandler];
+2025-10-19T14:23:37.0678070Z [0;1;32m                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-10-19T14:23:37.0679910Z [0m[1mTweak.x:646:27: [0m[0;1;35mwarning: [0m[1massigning to 'T1StatusCell *__strong' from incompatible type 'id<TTACoreStatusViewEventHandler>'[0m
+2025-10-19T14:23:37.0681990Z                 tweetView = [(T1TweetDetailsFocalStatusView *)actionsView.superview eventHandler];
+2025-10-19T14:23:37.0683710Z [0;1;32m                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-10-19T14:23:37.0685490Z [0m[1mTweak.x:648:27: [0m[0;1;35mwarning: [0m[1massigning to 'T1StatusCell *__strong' from incompatible type 'id<TTACoreStatusViewEventHandler>'[0m
+2025-10-19T14:23:37.0687480Z                 tweetView = [(T1ConversationFocalStatusView *)actionsView.superview eventHandler];
+2025-10-19T14:23:37.0688800Z [0;1;32m                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-10-19T14:23:37.0691220Z [0m[1mTweak.x:672:40: [0m[0;1;35mwarning: [0m[1minitializing 'T1StatusInlineActionsView *__strong' with an expression of incompatible type 'id<T1StatusInlineActionButtonDelegate>'[0m
+2025-10-19T14:23:37.0693370Z             T1StatusInlineActionsView *actionsView = self.delegate;
+2025-10-19T14:23:37.0694380Z [0;1;32m                                       ^             ~~~~~~~~~~~~~
+2025-10-19T14:23:37.0696120Z [0m[1mTweak.x:676:27: [0m[0;1;35mwarning: [0m[1massigning to 'T1StatusCell *__strong' from incompatible type 'id<TTACoreStatusViewEventHandler>'[0m
+2025-10-19T14:23:37.0697980Z                 tweetView = [(T1StandardStatusView *)actionsView.superview eventHandler];
+2025-10-19T14:23:37.0699170Z [0;1;32m                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-10-19T14:23:37.0700980Z [0m[1mTweak.x:678:27: [0m[0;1;35mwarning: [0m[1massigning to 'T1StatusCell *__strong' from incompatible type 'id<TTACoreStatusViewEventHandler>'[0m
+2025-10-19T14:23:37.0702970Z                 tweetView = [(T1TweetDetailsFocalStatusView *)actionsView.superview eventHandler];
+2025-10-19T14:23:37.0704430Z [0;1;32m                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-10-19T14:23:37.0706230Z [0m[1mTweak.x:680:27: [0m[0;1;35mwarning: [0m[1massigning to 'T1StatusCell *__strong' from incompatible type 'id<TTACoreStatusViewEventHandler>'[0m
+2025-10-19T14:23:37.0708170Z                 tweetView = [(T1ConversationFocalStatusView *)actionsView.superview eventHandler];
+2025-10-19T14:23:37.0709540Z [0;1;32m                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-10-19T14:23:37.0711400Z [0m[1mTweak.x:870:22: [0m[0;1;31merror: [0m[1mproperty 'parentViewController' cannot be found in forward class object 'T1HomeTimelineItemsViewController'[0m
+2025-10-19T14:23:37.0713100Z             if (self.parentViewController) {
+2025-10-19T14:23:37.0713840Z [0;1;32m                ~~~~ ^
+2025-10-19T14:23:37.0714710Z [0m[1mTweak.x:68:184: [0m[0;1;30mnote: [0mforward declaration of class here[0m
+2025-10-19T14:23:37.0740850Z @class T1DirectMessageConversationEntriesViewController; @class UIFontPickerViewController; @class BHDownloadInlineButton; @class _TtC10TwitterURT26URTTimelinePromptViewModel; @class T1HomeTimelineItemsViewController; @class T1MediaAttachmentsViewCell; @class TUIFollowControl; @class TFNActionItem; @class TTAStatusInlineBookmarkButton; @class T1StandardStatusView; @class T1StandardStatusAttachmentViewAdapter; @class T1StatusInlineShareButton; @class TFNMenuSheetViewController; @class T1StatusInlineActionsView; @class TAEStandardFontGroup; @class T1DirectMessageEntryMediaCell; @class T1TabBarViewController; @class T1ProfileSummaryView; @class T1HighQualityImagesUploadSettings; @class TFNNavigationBar; @class TTAStatusInlineAnalyticsButton; @class TFNAttributedTextModel; @class SFSafariViewController; @class TFNSettingsNavigationItem; @class T1TweetDetailsViewController; @class TFNNavigationController; @class T1TweetComposeViewController; @class THFHomeTimelineContainerViewController; @class TFNItemsDataViewController; @class NSUserDefaults; @class TFNTwitterURTTimelineStatusTopicBanner; @class TTAStatusInlineShareButton; @class TFNTwitterAccount; @class T1ProfileHeaderViewController; @class T1ImmersiveExploreCardView; @class TFSTwitterAPICommandAccountStateProvider; @class TFNTwitterCanonicalUser; @class TFNTwitterMediaUploadConfiguration; @class T1ImageDisplayView; @class T1StatusInlineFavoriteButton; @class NSParagraphStyle; @class TFNTextCell; @class TTAStatusInlineFavoriteButton; @class TTMAssetVoiceRecording; @class TFNPagingViewController; @class TFNActiveTextItem; @class T1ConversationFocalStatusView; @class TFNTableView; @class T1SettingsViewController; @class T1SlideshowViewController; @class TFSTwitterEntityURL; @class T1AppDelegate; @class HBForceCepheiPrefs; @class T1URTTimelineStatusItemViewModel; @class T1SearchTypeaheadViewController; @class TFNTwitterToastNudgeExperimentModel; @class SFInteractiveDismissController; @class T1GenericSettingsViewController; @class T1AppSplitViewController; @class TFNTwitterStatus; @class TPSTwitterFeatureSwitches; @class TTAStatusInlineActionsView; @class THFHomeTimelineItemsViewController; @class TTSSearchTypeaheadViewController; @class T1TweetDetailsFocalStatusView; 
+2025-10-19T14:23:37.0767040Z [0;1;32m                                                                                                                                                                                       ^
+2025-10-19T14:23:37.0768910Z [0m[1mTweak.x:871:46: [0m[0;1;31merror: [0m[1mproperty 'parentViewController' cannot be found in forward class object 'T1HomeTimelineItemsViewController'[0m
+2025-10-19T14:23:37.0770950Z                 for (UIView *subview in self.parentViewController.view.subviews) {
+2025-10-19T14:23:37.0772040Z [0;1;32m                                        ~~~~ ^
+2025-10-19T14:23:37.0773020Z [0m[1mTweak.x:68:184: [0m[0;1;30mnote: [0mforward declaration of class here[0m
+2025-10-19T14:23:37.0798690Z @class T1DirectMessageConversationEntriesViewController; @class UIFontPickerViewController; @class BHDownloadInlineButton; @class _TtC10TwitterURT26URTTimelinePromptViewModel; @class T1HomeTimelineItemsViewController; @class T1MediaAttachmentsViewCell; @class TUIFollowControl; @class TFNActionItem; @class TTAStatusInlineBookmarkButton; @class T1StandardStatusView; @class T1StandardStatusAttachmentViewAdapter; @class T1StatusInlineShareButton; @class TFNMenuSheetViewController; @class T1StatusInlineActionsView; @class TAEStandardFontGroup; @class T1DirectMessageEntryMediaCell; @class T1TabBarViewController; @class T1ProfileSummaryView; @class T1HighQualityImagesUploadSettings; @class TFNNavigationBar; @class TTAStatusInlineAnalyticsButton; @class TFNAttributedTextModel; @class SFSafariViewController; @class TFNSettingsNavigationItem; @class T1TweetDetailsViewController; @class TFNNavigationController; @class T1TweetComposeViewController; @class THFHomeTimelineContainerViewController; @class TFNItemsDataViewController; @class NSUserDefaults; @class TFNTwitterURTTimelineStatusTopicBanner; @class TTAStatusInlineShareButton; @class TFNTwitterAccount; @class T1ProfileHeaderViewController; @class T1ImmersiveExploreCardView; @class TFSTwitterAPICommandAccountStateProvider; @class TFNTwitterCanonicalUser; @class TFNTwitterMediaUploadConfiguration; @class T1ImageDisplayView; @class T1StatusInlineFavoriteButton; @class NSParagraphStyle; @class TFNTextCell; @class TTAStatusInlineFavoriteButton; @class TTMAssetVoiceRecording; @class TFNPagingViewController; @class TFNActiveTextItem; @class T1ConversationFocalStatusView; @class TFNTableView; @class T1SettingsViewController; @class T1SlideshowViewController; @class TFSTwitterEntityURL; @class T1AppDelegate; @class HBForceCepheiPrefs; @class T1URTTimelineStatusItemViewModel; @class T1SearchTypeaheadViewController; @class TFNTwitterToastNudgeExperimentModel; @class SFInteractiveDismissController; @class T1GenericSettingsViewController; @class T1AppSplitViewController; @class TFNTwitterStatus; @class TPSTwitterFeatureSwitches; @class TTAStatusInlineActionsView; @class THFHomeTimelineItemsViewController; @class TTSSearchTypeaheadViewController; @class T1TweetDetailsFocalStatusView; 
+2025-10-19T14:23:37.0825100Z [0;1;32m                                                                                                                                                                                       ^
+2025-10-19T14:23:37.0826990Z [0m[1mTweak.x:902:22: [0m[0;1;31merror: [0m[1mproperty 'parentViewController' cannot be found in forward class object 'THFHomeTimelineItemsViewController'[0m
+2025-10-19T14:23:37.0828710Z             if (self.parentViewController) {
+2025-10-19T14:23:37.0829430Z [0;1;32m                ~~~~ ^
+2025-10-19T14:23:37.0830340Z [0m[1mTweak.x:68:2139: [0m[0;1;30mnote: [0mforward declaration of class here[0m
+2025-10-19T14:23:37.0855550Z @class T1DirectMessageConversationEntriesViewController; @class UIFontPickerViewController; @class BHDownloadInlineButton; @class _TtC10TwitterURT26URTTimelinePromptViewModel; @class T1HomeTimelineItemsViewController; @class T1MediaAttachmentsViewCell; @class TUIFollowControl; @class TFNActionItem; @class TTAStatusInlineBookmarkButton; @class T1StandardStatusView; @class T1StandardStatusAttachmentViewAdapter; @class T1StatusInlineShareButton; @class TFNMenuSheetViewController; @class T1StatusInlineActionsView; @class TAEStandardFontGroup; @class T1DirectMessageEntryMediaCell; @class T1TabBarViewController; @class T1ProfileSummaryView; @class T1HighQualityImagesUploadSettings; @class TFNNavigationBar; @class TTAStatusInlineAnalyticsButton; @class TFNAttributedTextModel; @class SFSafariViewController; @class TFNSettingsNavigationItem; @class T1TweetDetailsViewController; @class TFNNavigationController; @class T1TweetComposeViewController; @class THFHomeTimelineContainerViewController; @class TFNItemsDataViewController; @class NSUserDefaults; @class TFNTwitterURTTimelineStatusTopicBanner; @class TTAStatusInlineShareButton; @class TFNTwitterAccount; @class T1ProfileHeaderViewController; @class T1ImmersiveExploreCardView; @class TFSTwitterAPICommandAccountStateProvider; @class TFNTwitterCanonicalUser; @class TFNTwitterMediaUploadConfiguration; @class T1ImageDisplayView; @class T1StatusInlineFavoriteButton; @class NSParagraphStyle; @class TFNTextCell; @class TTAStatusInlineFavoriteButton; @class TTMAssetVoiceRecording; @class TFNPagingViewController; @class TFNActiveTextItem; @class T1ConversationFocalStatusView; @class TFNTableView; @class T1SettingsViewController; @class T1SlideshowViewController; @class TFSTwitterEntityURL; @class T1AppDelegate; @class HBForceCepheiPrefs; @class T1URTTimelineStatusItemViewModel; @class T1SearchTypeaheadViewController; @class TFNTwitterToastNudgeExperimentModel; @class SFInteractiveDismissController; @class T1GenericSettingsViewController; @class T1AppSplitViewController; @class TFNTwitterStatus; @class TPSTwitterFeatureSwitches; @class TTAStatusInlineActionsView; @class THFHomeTimelineItemsViewController; @class TTSSearchTypeaheadViewController; @class T1TweetDetailsFocalStatusView; 
+2025-10-19T14:23:37.0884630Z [0;1;32m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
+2025-10-19T14:23:37.0888070Z [0m[1mTweak.x:903:46: [0m[0;1;31merror: [0m[1mproperty 'parentViewController' cannot be found in forward class object 'THFHomeTimelineItemsViewController'[0m
+2025-10-19T14:23:37.0889990Z                 for (UIView *subview in self.parentViewController.view.subviews) {
+2025-10-19T14:23:37.0891040Z [0;1;32m                                        ~~~~ ^
+2025-10-19T14:23:37.0892040Z [0m[1mTweak.x:68:2139: [0m[0;1;30mnote: [0mforward declaration of class here[0m
+2025-10-19T14:23:37.0917660Z @class T1DirectMessageConversationEntriesViewController; @class UIFontPickerViewController; @class BHDownloadInlineButton; @class _TtC10TwitterURT26URTTimelinePromptViewModel; @class T1HomeTimelineItemsViewController; @class T1MediaAttachmentsViewCell; @class TUIFollowControl; @class TFNActionItem; @class TTAStatusInlineBookmarkButton; @class T1StandardStatusView; @class T1StandardStatusAttachmentViewAdapter; @class T1StatusInlineShareButton; @class TFNMenuSheetViewController; @class T1StatusInlineActionsView; @class TAEStandardFontGroup; @class T1DirectMessageEntryMediaCell; @class T1TabBarViewController; @class T1ProfileSummaryView; @class T1HighQualityImagesUploadSettings; @class TFNNavigationBar; @class TTAStatusInlineAnalyticsButton; @class TFNAttributedTextModel; @class SFSafariViewController; @class TFNSettingsNavigationItem; @class T1TweetDetailsViewController; @class TFNNavigationController; @class T1TweetComposeViewController; @class THFHomeTimelineContainerViewController; @class TFNItemsDataViewController; @class NSUserDefaults; @class TFNTwitterURTTimelineStatusTopicBanner; @class TTAStatusInlineShareButton; @class TFNTwitterAccount; @class T1ProfileHeaderViewController; @class T1ImmersiveExploreCardView; @class TFSTwitterAPICommandAccountStateProvider; @class TFNTwitterCanonicalUser; @class TFNTwitterMediaUploadConfiguration; @class T1ImageDisplayView; @class T1StatusInlineFavoriteButton; @class NSParagraphStyle; @class TFNTextCell; @class TTAStatusInlineFavoriteButton; @class TTMAssetVoiceRecording; @class TFNPagingViewController; @class TFNActiveTextItem; @class T1ConversationFocalStatusView; @class TFNTableView; @class T1SettingsViewController; @class T1SlideshowViewController; @class TFSTwitterEntityURL; @class T1AppDelegate; @class HBForceCepheiPrefs; @class T1URTTimelineStatusItemViewModel; @class T1SearchTypeaheadViewController; @class TFNTwitterToastNudgeExperimentModel; @class SFInteractiveDismissController; @class T1GenericSettingsViewController; @class T1AppSplitViewController; @class TFNTwitterStatus; @class TPSTwitterFeatureSwitches; @class TTAStatusInlineActionsView; @class THFHomeTimelineItemsViewController; @class TTSSearchTypeaheadViewController; @class T1TweetDetailsFocalStatusView; 
+2025-10-19T14:23:37.0945950Z [0;1;32m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
+2025-10-19T14:23:37.0949000Z [0m[1mTweak.x:939:14: [0m[0;1;31merror: [0m[1mreceiver type 'THFHomeTimelineContainerViewController' for instance message is a forward declaration[0m
+2025-10-19T14:23:37.0950890Z         if ([self respondsToSelector:@selector(setSelectedTimelineIndex:)]) {
+2025-10-19T14:23:37.0951900Z [0;1;32m             ^~~~
+2025-10-19T14:23:37.0952760Z [0m[1mTweak.x:68:959: [0m[0;1;30mnote: [0mforward declaration of class here[0m
+2025-10-19T14:23:37.0978420Z @class T1DirectMessageConversationEntriesViewController; @class UIFontPickerViewController; @class BHDownloadInlineButton; @class _TtC10TwitterURT26URTTimelinePromptViewModel; @class T1HomeTimelineItemsViewController; @class T1MediaAttachmentsViewCell; @class TUIFollowControl; @class TFNActionItem; @class TTAStatusInlineBookmarkButton; @class T1StandardStatusView; @class T1StandardStatusAttachmentViewAdapter; @class T1StatusInlineShareButton; @class TFNMenuSheetViewController; @class T1StatusInlineActionsView; @class TAEStandardFontGroup; @class T1DirectMessageEntryMediaCell; @class T1TabBarViewController; @class T1ProfileSummaryView; @class T1HighQualityImagesUploadSettings; @class TFNNavigationBar; @class TTAStatusInlineAnalyticsButton; @class TFNAttributedTextModel; @class SFSafariViewController; @class TFNSettingsNavigationItem; @class T1TweetDetailsViewController; @class TFNNavigationController; @class T1TweetComposeViewController; @class THFHomeTimelineContainerViewController; @class TFNItemsDataViewController; @class NSUserDefaults; @class TFNTwitterURTTimelineStatusTopicBanner; @class TTAStatusInlineShareButton; @class TFNTwitterAccount; @class T1ProfileHeaderViewController; @class T1ImmersiveExploreCardView; @class TFSTwitterAPICommandAccountStateProvider; @class TFNTwitterCanonicalUser; @class TFNTwitterMediaUploadConfiguration; @class T1ImageDisplayView; @class T1StatusInlineFavoriteButton; @class NSParagraphStyle; @class TFNTextCell; @class TTAStatusInlineFavoriteButton; @class TTMAssetVoiceRecording; @class TFNPagingViewController; @class TFNActiveTextItem; @class T1ConversationFocalStatusView; @class TFNTableView; @class T1SettingsViewController; @class T1SlideshowViewController; @class TFSTwitterEntityURL; @class T1AppDelegate; @class HBForceCepheiPrefs; @class T1URTTimelineStatusItemViewModel; @class T1SearchTypeaheadViewController; @class TFNTwitterToastNudgeExperimentModel; @class SFInteractiveDismissController; @class T1GenericSettingsViewController; @class T1AppSplitViewController; @class TFNTwitterStatus; @class TPSTwitterFeatureSwitches; @class TTAStatusInlineActionsView; @class THFHomeTimelineItemsViewController; @class TTSSearchTypeaheadViewController; @class T1TweetDetailsFocalStatusView; 
+2025-10-19T14:23:37.1005260Z [0;1;32m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+2025-10-19T14:23:37.1007440Z [0m[1mTweak.x:940:14: [0m[0;1;31merror: [0m[1mreceiver type 'THFHomeTimelineContainerViewController' for instance message is a forward declaration[0m
+2025-10-19T14:23:37.1009440Z             [self performSelector:@selector(setSelectedTimelineIndex:) withObject:@(1)];
+2025-10-19T14:23:37.1010490Z [0;1;32m             ^~~~
+2025-10-19T14:23:37.1011370Z [0m[1mTweak.x:68:959: [0m[0;1;30mnote: [0mforward declaration of class here[0m
+2025-10-19T14:23:37.1036850Z @class T1DirectMessageConversationEntriesViewController; @class UIFontPickerViewController; @class BHDownloadInlineButton; @class _TtC10TwitterURT26URTTimelinePromptViewModel; @class T1HomeTimelineItemsViewController; @class T1MediaAttachmentsViewCell; @class TUIFollowControl; @class TFNActionItem; @class TTAStatusInlineBookmarkButton; @class T1StandardStatusView; @class T1StandardStatusAttachmentViewAdapter; @class T1StatusInlineShareButton; @class TFNMenuSheetViewController; @class T1StatusInlineActionsView; @class TAEStandardFontGroup; @class T1DirectMessageEntryMediaCell; @class T1TabBarViewController; @class T1ProfileSummaryView; @class T1HighQualityImagesUploadSettings; @class TFNNavigationBar; @class TTAStatusInlineAnalyticsButton; @class TFNAttributedTextModel; @class SFSafariViewController; @class TFNSettingsNavigationItem; @class T1TweetDetailsViewController; @class TFNNavigationController; @class T1TweetComposeViewController; @class THFHomeTimelineContainerViewController; @class TFNItemsDataViewController; @class NSUserDefaults; @class TFNTwitterURTTimelineStatusTopicBanner; @class TTAStatusInlineShareButton; @class TFNTwitterAccount; @class T1ProfileHeaderViewController; @class T1ImmersiveExploreCardView; @class TFSTwitterAPICommandAccountStateProvider; @class TFNTwitterCanonicalUser; @class TFNTwitterMediaUploadConfiguration; @class T1ImageDisplayView; @class T1StatusInlineFavoriteButton; @class NSParagraphStyle; @class TFNTextCell; @class TTAStatusInlineFavoriteButton; @class TTMAssetVoiceRecording; @class TFNPagingViewController; @class TFNActiveTextItem; @class T1ConversationFocalStatusView; @class TFNTableView; @class T1SettingsViewController; @class T1SlideshowViewController; @class TFSTwitterEntityURL; @class T1AppDelegate; @class HBForceCepheiPrefs; @class T1URTTimelineStatusItemViewModel; @class T1SearchTypeaheadViewController; @class TFNTwitterToastNudgeExperimentModel; @class SFInteractiveDismissController; @class T1GenericSettingsViewController; @class T1AppSplitViewController; @class TFNTwitterStatus; @class TPSTwitterFeatureSwitches; @class TTAStatusInlineActionsView; @class THFHomeTimelineItemsViewController; @class TTSSearchTypeaheadViewController; @class T1TweetDetailsFocalStatusView; 
+2025-10-19T14:23:37.1063750Z [0;1;32m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+2025-10-19T14:23:37.1065780Z [0m[1mTweak.x:951:42: [0m[0;1;31merror: [0m[1mproperty 'view' cannot be found in forward class object 'THFHomeTimelineContainerViewController'[0m
+2025-10-19T14:23:37.1067310Z             for (UIView *subview in self.view.subviews) {
+2025-10-19T14:23:37.1068160Z [0;1;32m                                    ~~~~ ^
+2025-10-19T14:23:37.1069090Z [0m[1mTweak.x:68:959: [0m[0;1;30mnote: [0mforward declaration of class here[0m
+2025-10-19T14:23:37.1094830Z @class T1DirectMessageConversationEntriesViewController; @class UIFontPickerViewController; @class BHDownloadInlineButton; @class _TtC10TwitterURT26URTTimelinePromptViewModel; @class T1HomeTimelineItemsViewController; @class T1MediaAttachmentsViewCell; @class TUIFollowControl; @class TFNActionItem; @class TTAStatusInlineBookmarkButton; @class T1StandardStatusView; @class T1StandardStatusAttachmentViewAdapter; @class T1StatusInlineShareButton; @class TFNMenuSheetViewController; @class T1StatusInlineActionsView; @class TAEStandardFontGroup; @class T1DirectMessageEntryMediaCell; @class T1TabBarViewController; @class T1ProfileSummaryView; @class T1HighQualityImagesUploadSettings; @class TFNNavigationBar; @class TTAStatusInlineAnalyticsButton; @class TFNAttributedTextModel; @class SFSafariViewController; @class TFNSettingsNavigationItem; @class T1TweetDetailsViewController; @class TFNNavigationController; @class T1TweetComposeViewController; @class THFHomeTimelineContainerViewController; @class TFNItemsDataViewController; @class NSUserDefaults; @class TFNTwitterURTTimelineStatusTopicBanner; @class TTAStatusInlineShareButton; @class TFNTwitterAccount; @class T1ProfileHeaderViewController; @class T1ImmersiveExploreCardView; @class TFSTwitterAPICommandAccountStateProvider; @class TFNTwitterCanonicalUser; @class TFNTwitterMediaUploadConfiguration; @class T1ImageDisplayView; @class T1StatusInlineFavoriteButton; @class NSParagraphStyle; @class TFNTextCell; @class TTAStatusInlineFavoriteButton; @class TTMAssetVoiceRecording; @class TFNPagingViewController; @class TFNActiveTextItem; @class T1ConversationFocalStatusView; @class TFNTableView; @class T1SettingsViewController; @class T1SlideshowViewController; @class TFSTwitterEntityURL; @class T1AppDelegate; @class HBForceCepheiPrefs; @class T1URTTimelineStatusItemViewModel; @class T1SearchTypeaheadViewController; @class TFNTwitterToastNudgeExperimentModel; @class SFInteractiveDismissController; @class T1GenericSettingsViewController; @class T1AppSplitViewController; @class TFNTwitterStatus; @class TPSTwitterFeatureSwitches; @class TTAStatusInlineActionsView; @class THFHomeTimelineItemsViewController; @class TTSSearchTypeaheadViewController; @class T1TweetDetailsFocalStatusView; 
+2025-10-19T14:23:37.1121650Z [0;1;32m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+2025-10-19T14:23:37.1122820Z [0m7 warnings and 7 errors generated.
+2025-10-19T14:23:37.1125010Z make[3]: *** [/Users/runner/work/BHTwitter/BHTwitter/theos/makefiles/instance/rules.mk:404: /Users/runner/work/BHTwitter/BHTwitter/main/.theos/obj/debug/arm64/Tweak.x.6cd1cbb6.o] Error 1
+2025-10-19T14:23:37.1127560Z rm /Users/runner/work/BHTwitter/BHTwitter/main/.theos/obj/debug/arm64/Tweak.x.m
+2025-10-19T14:23:37.1130070Z make[2]: *** [/Users/runner/work/BHTwitter/BHTwitter/theos/makefiles/instance/library.mk:52: /Users/runner/work/BHTwitter/BHTwitter/main/.theos/obj/debug/arm64/BHTwitter.dylib] Error 2
+2025-10-19T14:23:37.1133010Z make[1]: *** [/Users/runner/work/BHTwitter/BHTwitter/theos/makefiles/instance/library.mk:37: internal-library-all_] Error 2
+2025-10-19T14:23:37.1135350Z make: *** [/Users/runner/work/BHTwitter/BHTwitter/theos/makefiles/master/rules.mk:146: BHTwitter.all.tweak.variables] Error 2
+2025-10-19T14:23:37.1136980Z [1m[31mMake command failed.[0m
+2025-10-19T14:23:37.1155050Z ##[error]Process completed with exit code 1.
+2025-10-19T14:23:37.1342290Z Post job cleanup.
+2025-10-19T14:23:37.3081150Z [command]/usr/local/bin/git version
+2025-10-19T14:23:37.3180460Z git version 2.50.1
+2025-10-19T14:23:37.3235710Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/fcd35b86-6393-4dfd-9f61-7047e1b79f09/.gitconfig'
+2025-10-19T14:23:37.3257670Z Temporarily overriding HOME='/Users/runner/work/_temp/fcd35b86-6393-4dfd-9f61-7047e1b79f09' before making global git config changes
+2025-10-19T14:23:37.3259670Z Adding repository directory to the temporary git global config as a safe directory
+2025-10-19T14:23:37.3267030Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/BHTwitter/BHTwitter/theos
+2025-10-19T14:23:37.3379340Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-10-19T14:23:37.3483340Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-10-19T14:23:37.4810440Z Entering 'vendor/dm.pl'
+2025-10-19T14:23:37.5154630Z Entering 'vendor/include'
+2025-10-19T14:23:37.5524790Z Entering 'vendor/lib'
+2025-10-19T14:23:37.5871730Z Entering 'vendor/logos'
+2025-10-19T14:23:37.6247860Z Entering 'vendor/nic'
+2025-10-19T14:23:37.6575690Z Entering 'vendor/orion'
+2025-10-19T14:23:37.6888060Z Entering 'vendor/orion/fishhook'
+2025-10-19T14:23:37.7198060Z Entering 'vendor/swift-support'
+2025-10-19T14:23:37.7503140Z Entering 'vendor/templates'
+2025-10-19T14:23:37.7834890Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-10-19T14:23:37.7920900Z http.https://github.com/.extraheader
+2025-10-19T14:23:37.7942260Z [command]/usr/local/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-10-19T14:23:37.8059160Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-10-19T14:23:37.9364940Z Entering 'vendor/dm.pl'
+2025-10-19T14:23:37.9569230Z http.https://github.com/.extraheader
+2025-10-19T14:23:37.9764630Z Entering 'vendor/include'
+2025-10-19T14:23:37.9978800Z http.https://github.com/.extraheader
+2025-10-19T14:23:38.0173600Z Entering 'vendor/lib'
+2025-10-19T14:23:38.0374750Z http.https://github.com/.extraheader
+2025-10-19T14:23:38.0567970Z Entering 'vendor/logos'
+2025-10-19T14:23:38.0769150Z http.https://github.com/.extraheader
+2025-10-19T14:23:38.0962730Z Entering 'vendor/nic'
+2025-10-19T14:23:38.1162690Z http.https://github.com/.extraheader
+2025-10-19T14:23:38.1353230Z Entering 'vendor/orion'
+2025-10-19T14:23:38.1566230Z http.https://github.com/.extraheader
+2025-10-19T14:23:38.1796400Z Entering 'vendor/orion/fishhook'
+2025-10-19T14:23:38.2037640Z http.https://github.com/.extraheader
+2025-10-19T14:23:38.2275750Z Entering 'vendor/swift-support'
+2025-10-19T14:23:38.2517720Z http.https://github.com/.extraheader
+2025-10-19T14:23:38.2760750Z Entering 'vendor/templates'
+2025-10-19T14:23:38.3003500Z http.https://github.com/.extraheader
+2025-10-19T14:23:38.3455560Z Post job cleanup.
+2025-10-19T14:23:38.5247990Z [command]/usr/local/bin/git version
+2025-10-19T14:23:38.5329450Z git version 2.50.1
+2025-10-19T14:23:38.5383530Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/cb9d81c1-f6b6-4cef-983e-c24c5740a464/.gitconfig'
+2025-10-19T14:23:38.5404760Z Temporarily overriding HOME='/Users/runner/work/_temp/cb9d81c1-f6b6-4cef-983e-c24c5740a464' before making global git config changes
+2025-10-19T14:23:38.5406760Z Adding repository directory to the temporary git global config as a safe directory
+2025-10-19T14:23:38.5423890Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/BHTwitter/BHTwitter/main
+2025-10-19T14:23:38.5528450Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-10-19T14:23:38.5629770Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-10-19T14:23:38.6871310Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-10-19T14:23:38.6947010Z http.https://github.com/.extraheader
+2025-10-19T14:23:38.6966580Z [command]/usr/local/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-10-19T14:23:38.7068450Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-10-19T14:23:38.8452490Z Cleaning up orphan processes

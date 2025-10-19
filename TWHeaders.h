@@ -226,6 +226,21 @@ static NSString *_lastCopiedURL;
 @property(retain, nonatomic) T1ProfileUserViewModel *viewModel;
 @end
 
+@interface THFHomeTimelineContainerViewController : UIViewController
+- (void)_t1_selectTimelineViewController:(id)viewController;
+- (id)latestTimelineViewController;
+- (void)_t1_setSelectedTimelineViewController:(id)viewController;
+- (void)_t1_selectLastSelectedTimelineViewController;
+@end
+
+@interface T1HomeTimelineItemsViewController : UIViewController
+- (void)_t1_initializeFleets;
+@end
+
+@interface THFHomeTimelineItemsViewController : UIViewController
+- (void)_t1_initializeFleets;
+@end
+
 @protocol T1StatusInlineActionButtonDelegate <NSObject>
 @end
 @protocol TTAStatusInlineActionButtonDelegate <NSObject>
